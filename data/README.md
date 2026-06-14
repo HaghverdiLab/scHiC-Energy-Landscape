@@ -1,1 +1,1 @@
-
+Cell barcode and cluster annotations were obtained from the metadata file GSE253407_Droplet_Hi-C_mouse_ctx_metadata.xls.gz (GEO dataset). Barcodes corresponding to non-neuronal cell types were excluded, and only neuronal barcodes were retained for downstream analyses.
