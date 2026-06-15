@@ -10,7 +10,7 @@ After filtering, the processed files from both samples are merged into a single 
 
 Next, the merged contacts are split into single-cell and cluster-specific contact files. This is performed using `0.3.1_sc_splitting.py` and `0.3.1_cluster_splitting.py`, which organize the contact data based on individual barcodes and predefined cell clusters.
 
-In the final preprocessing step, the resulting .pairs files are converted into .cool format contact matrices using `0.4.1_sc_pairs_to_cool.py` for single-cell data and `0.4.1_cluster_pairs_to_cool.py` for cluster-level data. These .cool files represent the final output of the preprocessing pipeline.
+In the final preprocessing step, the resulting .pairs files are converted into .cool format contact matrices using `0.4.1_sc_pairs_to_cool.py` for single-cell data and `0.4.1_cluster_pairs_to_cool.py` for cluster-level data, use [non_neuron.tsv](https://github.com/HaghverdiLab/scHiC-Energy-Landscape/blob/main/data/non_neuron.tsv) for cell type embedding. These .cool files represent the final output of the preprocessing pipeline.
 
 The final outputs consist of two main directories: one containing single-cell .cool contact maps and another containing cluster-level .cool contact maps. These datasets are subsequently used for all downstream analyses.
 
