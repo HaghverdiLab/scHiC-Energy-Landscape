@@ -7,8 +7,8 @@ import gzip
 # -----------------------------
 # SET YOUR INPUT FILES HERE:
 pairs_file = "merged_716_462_chr1.pairs.gz"  # Input .pairs.gz file
-cluster_file = "output.tsv"                   # Two columns: barcode, cluster
-outdir = "output_umap_folder"                             # Output directory
+cluster_file = "non_neuron.tsv"                   # Two columns: barcode, cluster, find it in data repo
+outdir = "output_folder"                             # Output directory
 max_open_files = 1000                                # Limit on simultaneously open files
 # -----------------------------
 
