@@ -45,7 +45,7 @@ Example:
 
 ```text
 AAACGAAAGACCGCAA    OPC
-AAACGAAAGTTCTGTA    Astrocyte
+AAACGAAAGTTCTGTA    ASC
 ```
 
 ---
