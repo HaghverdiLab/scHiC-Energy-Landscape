@@ -27,7 +27,7 @@ def main():
 python higashi_cpg.py
 ```
 
-This will generate a tab-separated file containing the CpG ratio for every genomic bin, which is required for compartment orientation.
+This will generate chrom1_cpg_ratios.txt, a tab-separated file containing the CpG ratio for every genomic bin, which is required for compartment orientation.
 
 ---
 
