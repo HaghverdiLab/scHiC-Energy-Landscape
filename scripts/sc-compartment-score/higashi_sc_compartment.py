@@ -27,11 +27,11 @@ EPS_LOG = 1e-3
 QUANTILE_RANGE = (-2.5, 2.5)  # New range for quantile normalization
 
 # -------------------- USER PATHS --------------------
-txt_dir = "/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/normalized_contacts/bandnorm/bandnorm_txt_non_neuron/"          # folder with per-barcode .txt files
-cpg_txt = "/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/chrom1_cpg_ratios.txt"         # CpG ratios text file
-celltype_file = "/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/non_neuron.tsv"  # tab-separated barcode -> celltype
-out_dir = "/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/output_compartments/new/new/heatmaps/"   # output folder
-quantile_out_dir = "/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/output_compartments/new/quantile_scores/"  # folder for quantile normalized scores
+txt_dir = "/bandnorm/bandnorm_txt_non_neuron/"          # folder with per-barcode .txt files. follow the pipeline for normalization in /scripts/scHiC normalization/ to get txt normalized contacts
+cpg_txt = "/chrom1_cpg_ratios.txt"         # CpG ratios text file #run higashi_cpg.py to get this
+celltype_file = "/non_neuron.tsv"  # tab-separated barcode -> celltype # download it from /data directory
+out_dir = "/output_compartments/new/new/heatmaps/"   # output folder
+quantile_out_dir = "/output_compartments/new/quantile_scores/"  # folder for quantile normalized scores
 chrom = "chr1"                                         # chromosome to process
 
 # -----------------------------------------------------
