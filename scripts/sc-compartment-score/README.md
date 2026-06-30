@@ -18,7 +18,7 @@ def main():
     # Hardcoded file paths
     fasta_path = "mm10.fa"
     chrom_size_path = "chrom_sizes.txt"
-    output_txt_path = "/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/temp_files/chrom1_cpg_ratios.txt"
+    output_txt_path = "/chrom1_cpg_ratios.txt"
     resolution = 500000  # 500 kb resolution
 ```
 
