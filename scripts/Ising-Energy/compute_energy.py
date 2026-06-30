@@ -199,25 +199,25 @@ def main():
         description="Compute compartment score sums from paired files.")
     parser.add_argument(
         "contacts_folder",
-        default="/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/normalized_contacts/bandnorm/filtered_tads_contacts/",
+        default="/filtered_tads_contacts/",
         nargs="?",
         help="Path to the folder containing contact files (*_filtered.txt)"
     )
     parser.add_argument(
         "scores_folder",
-        default="/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/output_compartments/new/new/quantile_scores/",
+        default="/output_compartments/new/new/quantile_scores/",
         nargs="?",
         help="Path to the folder containing score files (e.g., *.txt)"
     )
     parser.add_argument(
         "output_csv",
-        default="/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/output_compartments/new/new/new_energy.csv",
+        default="/output_compartments/new/new/new_energy.csv",
         nargs="?",
         help="Path to the output CSV file (e.g., output.csv)"
     )
     parser.add_argument(
         "metadata_tsv",
-        default="/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/non_neuron.tsv",
+        default="/non_neuron.tsv", # data directory
         nargs="?",
         help="(Optional) Path to TSV file with columns: barcode  celltype"
     )
