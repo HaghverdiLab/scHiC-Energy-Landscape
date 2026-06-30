@@ -75,6 +75,6 @@ The merged file should have the following format:
 
 This merged table serves as the **metadata file** for all subsequent analyses in this repository.
 
-For convenience, a ready-to-use example of the merged metadata file is provided in the `data/` directory.
+For convenience, a ready-to-use example of the merged metadata file, `non_neuron_filtered_celltypes.tsv`, is provided in the `data/` directory.
 
 
