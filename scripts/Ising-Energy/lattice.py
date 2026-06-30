@@ -26,10 +26,10 @@ N_COMPONENTS = 10
 EPS_LOG = 1e-3
 
 # -------------------- USER PATHS --------------------
-txt_dir = "/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/normalized_contacts/bandnorm/bandnorm_txt_non_neuron/"
-cpg_txt = "/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/chrom1_cpg_ratios.txt"
-celltype_file = "/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/non_neuron.tsv"
-out_dir = "/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/output_compartments/lattice_plots/new/"
+txt_dir = "/bandnorm/bandnorm_txt_non_neuron/" #follow the pipeline for normalization in /scripts/scHiC normalization/ to get txt normalized contacts
+cpg_txt = "/chrom1_cpg_ratios.txt" #run higashi_cpg.py to get this
+celltype_file = "/non_neuron.tsv" # download it from /data directory
+out_dir = "/output_compartments/lattice_plots/new/"
 chrom = "chr1"
 # -----------------------------------------------------
 
@@ -266,14 +266,12 @@ def plot_average_compartment_lattice(celltype, compartment_scores, out_dir):
             if signs[i] == signs[j]:  # Same sign
                 avg_scores[i, j] = (compartment_scores[i] + compartment_scores[j]) / 2
     
-    # Create figure
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(20, 9))
+    # Create figure (single heatmap only)
+    fig, ax1 = plt.subplots(1, 1, figsize=(10, 9))
     
-    # Plot 1: Heatmap of average scores
-    # Create a masked array for NaN values
+    # Heatmap of average scores
     masked_avg = np.ma.masked_where(np.isnan(avg_scores), avg_scores)
     
-    # Use a diverging colormap
     cmap = plt.cm.RdBu_r
     cmap.set_bad('white')  # Set NaN values to white
     
@@ -285,31 +283,8 @@ def plot_average_compartment_lattice(celltype, compartment_scores, out_dir):
     ax1.set_xlabel('Bin ID', fontsize=12)
     ax1.set_ylabel('Bin ID', fontsize=12)
     
-    # Add colorbar
     cbar = plt.colorbar(im, ax=ax1, shrink=0.8)
     cbar.set_label('Average Compartment Score', fontsize=11)
-    
-    # Plot 2: Distribution of average scores
-    valid_avgs = avg_scores[~np.isnan(avg_scores)]
-    
-    if len(valid_avgs) > 0:
-        ax2.hist(valid_avgs, bins=50, color='steelblue', edgecolor='black', alpha=0.7)
-        ax2.axvline(x=0, color='red', linestyle='--', alpha=0.7, linewidth=2)
-        ax2.axvline(x=np.nanmean(valid_avgs), color='green', linestyle='-', 
-                   alpha=0.7, linewidth=2, label=f'Mean: {np.nanmean(valid_avgs):.3f}')
-        
-        ax2.set_xlabel('Average Compartment Score', fontsize=12)
-        ax2.set_ylabel('Frequency', fontsize=12)
-        ax2.set_title(f'Distribution of Average Scores\n(n={len(valid_avgs):,} pairs)', 
-                     fontsize=14, fontweight='bold')
-        ax2.legend(fontsize=11)
-        ax2.grid(True, alpha=0.3)
-        
-        # Add statistics
-        stats_text = f'Range: [{np.nanmin(valid_avgs):.3f}, {np.nanmax(valid_avgs):.3f}]\nStd: {np.nanstd(valid_avgs):.3f}'
-        ax2.text(0.98, 0.98, stats_text, transform=ax2.transAxes, fontsize=10,
-                verticalalignment='top', horizontalalignment='right',
-                bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
     
     plt.tight_layout()
     plt.savefig(os.path.join(out_dir, f'avg_compartment_lattice_{celltype}.png'), 
