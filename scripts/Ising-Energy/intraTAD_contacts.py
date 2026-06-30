@@ -621,10 +621,10 @@ if __name__ == "__main__":
     # ==================== CONFIGURATION ====================
     
     # File paths (UPDATE THESE)
-    INTRA_TADS_FOLDER = "/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/normalized_contacts/bandnorm/filtered_tads_contacts/" #repository of the txt files of intra-TADs contacts 
-    ALL_CONTACTS_FOLDER = "/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/normalized_contacts/bandnorm/bandnorm_txt_non_neuron/" # repository of txt contact files
-    BARCODE_FILE = "/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/non_neuron.tsv" # here you should input the repository of a tsv file which has columns of: barcodes and their corresponding cell type
-    OUTPUT_DIR = "/Users/mozhganoroujlu/Desktop/boot/new/"
+    INTRA_TADS_FOLDER = "/bandnorm/filtered_tads_contacts/" #repository of the txt files of intra-TADs contacts 
+    ALL_CONTACTS_FOLDER = "/bandnorm/bandnorm_txt_non_neuron/" # repository of txt contact files
+    BARCODE_FILE = "/non_neuron.tsv" # download it from /data dir
+    OUTPUT_DIR = "/boot/new/"
     
     # Analysis parameters
     TARGET_CELLTYPES = ['OPC', 'ASC', 'OGC']
