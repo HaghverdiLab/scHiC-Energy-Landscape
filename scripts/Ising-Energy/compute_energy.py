@@ -36,13 +36,20 @@ def plot_energy_by_celltype(results, barcode_to_celltype, output_base):
         ct = barcode_to_celltype.get(barcode, "Unknown")
         typed.append((barcode, energy, ct))
 
-    celltypes = sorted(set(t[2] for t in typed))
+    # Draw order controls overlap stacking — items drawn later sit on top.
+    # OGC and OPC are drawn first (pushed backward), ASC drawn last (brought forward).
+    draw_order = ['OGC', 'OPC', 'ASC']
+    present = set(t[2] for t in typed)
+    celltypes = [ct for ct in draw_order if ct in present]
+    celltypes += sorted(ct for ct in present if ct not in draw_order)  # any extras, just in case
 
     color_map = {
-        'OGC': '#4C72B0',
+        'OPC': '#4C72B0',
         'ASC': '#55A868',
-        'OPC': '#C44E52',
+        'OGC': '#C44E52',
     }
+
+    zorder_map = {'OGC': 1, 'OPC': 2, 'ASC': 3}
 
     fig, ax = plt.subplots(figsize=(12, 6))
     ax.set_facecolor('white')
@@ -59,20 +66,20 @@ def plot_energy_by_celltype(results, barcode_to_celltype, output_base):
     for ct in celltypes:
         ct_energies = np.array([e for _, e, c in typed if c == ct])
         color = color_map[ct]
+        z = zorder_map.get(ct, 1)
 
         ax.hist(ct_energies, bins=bins, alpha=0.45, color=color,
-                edgecolor='white', linewidth=0.5, label=ct)
+                edgecolor='white', linewidth=0.5, label=ct, zorder=z)
 
         if len(ct_energies) >= 2:
-            # bw_method=0.15 → tighter bandwidth, reveals bimodal structure
             kde = gaussian_kde(ct_energies, bw_method=0.25)
             x_range = np.linspace(global_min, global_max, 500)
             bin_width = bins[1] - bins[0]
             ax.plot(x_range, kde(x_range) * len(ct_energies) * bin_width,
-                    color=color, linewidth=2.0)
+                    color=color, linewidth=2.0, zorder=z + 0.5)
 
         ax.plot(ct_energies, np.full_like(ct_energies, -2.5),
-                '|', color=color, alpha=0.6, markersize=6)
+                '|', color=color, alpha=0.6, markersize=6, zorder=z)
 
     short_bc = lowest_barcode[:16] + ('...' if len(lowest_barcode) > 16 else '')
     annotation = (
