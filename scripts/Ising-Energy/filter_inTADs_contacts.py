@@ -15,9 +15,9 @@ def get_bin(value, bins):
     return None
 
 # Hardcoded folder paths (replace these with your actual paths)
-folder1 = '/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/normalized_contacts/raw/raw_txt/'  # e.g., 'C:\\Users\\YourName\\Documents\\folder_one'
-folder2 = '/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/normalized_contacts/raw/scKTLD_TADs/'  # e.g., 'C:\\Users\\YourName\\Documents\\folder_two'
-output_folder = '/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/normalized_contacts/raw/filtered_tads_contacts/'  # e.g., 'C:\\Users\\YourName\\Documents\\filtered_tads_contacts'
+folder1 = 'normalized_contacts/bandnorm/bandnorm_txt/'  # update it 
+folder2 = '/normalized_contacts/bandnorm/scKTLD_TADs/'  
+output_folder = '/normalized_contacts/bandnorm/filtered_tads_contacts/'  
 
 # Create output folder if it doesn't exist
 os.makedirs(output_folder, exist_ok=True)
