@@ -52,7 +52,7 @@ AAACGAAAGTTCTGTA    ASC
 
 ## Step 3. Run compartment calling
 
-Update the input and output paths in `higashi_compartment_score.py`:
+Update the input and output paths in `higashi_compartment.py`:
 
 - directory containing the single-cell Hi-C contact matrices (`.txt` files),
 - CpG ratio file generated in **Step 1**,
