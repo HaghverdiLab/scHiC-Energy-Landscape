@@ -1,13 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jun 30 16:12:19 2026
 
-@author: mozhganoroujlu
-"""
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 """
 Created for Hi-C intra-TAD analysis 
