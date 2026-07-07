@@ -29,8 +29,8 @@ Run the scripts in the `scripts/` directory in the following sequence:
 
 
 For detailed instructions, required inputs, configurable parameters, and output files for each stage, please refer to the corresponding `README.md` file in each pipeline directory.
----
 
+---
 ### reproducing_figures/
 
 Jupyter notebooks for figure reproduction.
