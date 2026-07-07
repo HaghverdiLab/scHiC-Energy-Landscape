@@ -4,7 +4,7 @@ Before running the simulated annealing pipeline, make sure you have already comp
 
 The simulated annealing workflow consists of the following steps:
 
-### Step 1: Assign Cell Types
+### Step 1: Cell Embedding
 
 Run:
 
