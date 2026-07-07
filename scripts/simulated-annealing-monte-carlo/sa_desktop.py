@@ -224,7 +224,7 @@ def run_spatial_simulated_annealing(
     k_neighbors: int = 150,
     spatial_weight: float = 0.6,
     energy_weight: float = 0.4,
-    T_start: float = 0.4,
+    T_start: float = 0.2,
     T_min: float = 1e-6,
     alpha: float = 0.98,
     outer_iterations: int = 200,
