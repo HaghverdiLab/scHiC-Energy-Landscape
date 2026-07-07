@@ -216,10 +216,10 @@ def create_run_statistics_report(run_data: list, output_file: str, original_df: 
 # ────────────────────────────────────────────────
 def run_spatial_simulated_annealing(
     tsv_file: str,
-    output_excel: str = "/Users/mozhganoroujlu/Desktop/SA/score/results/modif/generated/all_opcs/200n_e4_all_runs.xlsx",
-    output_rates: str = "/Users/mozhganoroujlu/Desktop/SA/score/results/modif/generated/all_opcs/200n_e4_acceptance_rates.xlsx",
-    output_final: str = "/Users/mozhganoroujlu/Desktop/SA/score/results/modif/generated/all_opcs/200n_e4_final_summary.xlsx",
-    output_run_stats: str = "/Users/mozhganoroujlu/Desktop/SA/score/results/modif/generated/all_opcs/200n_e4_run_statistics.xlsx",
+    output_excel: str = "/Users/mozhganoroujlu/Desktop/SA/score/results/modif/generated/all_opcs/150n_e4_all_runs.xlsx",
+    output_rates: str = "/Users/mozhganoroujlu/Desktop/SA/score/results/modif/generated/all_opcs/150n_e4_acceptance_rates.xlsx",
+    output_final: str = "/Users/mozhganoroujlu/Desktop/SA/score/results/modif/generated/all_opcs/150n_e4_final_summary.xlsx",
+    output_run_stats: str = "/Users/mozhganoroujlu/Desktop/SA/score/results/modif/generated/all_opcs/150n_e4_run_statistics.xlsx",
     num_runs: int = 5,
     k_neighbors: int = 100,
     spatial_weight: float = 0.7,
@@ -507,7 +507,7 @@ if __name__ == "__main__":
     run_spatial_simulated_annealing(
         tsv_file='/Users/mozhganoroujlu/Desktop/MOZHGUN/cell_fate/hi_c/codes_figures/folders/normalized_contacts/generated_barcodes.tsv',
         num_runs=1068,
-        k_neighbors=200,           # ← lowered default (increase if needed)
+        k_neighbors=150,           # ← lowered default (increase if needed)
         spatial_weight=0.6,
         energy_weight=0.4,
         outer_iterations=200,
