@@ -41,8 +41,8 @@ def get_best_neighbor_probs(
     neighbor_indices: np.ndarray,
     coords: np.ndarray,
     energies: np.ndarray,
-    spatial_weight: float = 0.7,
-    energy_weight: float = 0.3
+    spatial_weight: float = 0.6,
+    energy_weight: float = 0.4
 ) -> tuple[np.ndarray, float]:
     """
     Returns selection probabilities and total score sum (vectorized)
