@@ -62,7 +62,10 @@ Users must download the dataset from GEO and place it in the appropriate `data/`
 - scipy  
 - scikit-learn  
 - h5py  
-- cooler  
+- cooler
+- openpyxl
+- matplotlib
+- tqdm
 
 ---
 
