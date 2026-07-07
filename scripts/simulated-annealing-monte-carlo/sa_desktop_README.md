@@ -47,7 +47,7 @@ num_runs = 1068
 
 This parameter specifies how many simulated annealing trajectories are performed.
 
-In our study, `1068` corresponds to the number of **OPC (Oligodendrocyte Precursor Cell)** cells. Because OPCs are multipotent progenitor cells that can differentiate into **ASC** and **OGC**, the simulated annealing algorithm is initialized once from each OPC cell. Consequently, one optimization trajectory is generated for every OPC cell.
+In our study, `1068` corresponds to the number of **OPC** cells. Because OPCs are multipotent progenitor cells that can differentiate into **ASC** and **OGC**, the simulated annealing algorithm is initialized once from each OPC cell. Consequently, one optimization trajectory is generated for every OPC cell.
 
 #### Number of nearest neighbors
 
