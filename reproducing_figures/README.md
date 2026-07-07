@@ -1,4 +1,4 @@
-Reproducing Figure 4e
+####Reproducing Figure 4a and 4b:####
 
 Run the following script:
 
