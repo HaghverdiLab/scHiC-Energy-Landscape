@@ -26,7 +26,7 @@ Run:
 scripts/simulated-annealing-monte-carlo/generate_barcodes.py
 ```
 
-This script generates a barcode file that will be used as the input for the simulated annealing algorithm.
+This script generates a barcode file that will be used as the input for the simulated annealing algorithm. or you can simply use 
 
 ### Step 3: Run the Simulated Annealing Algorithm
 
