@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Spatial Simulated Annealing - Single Run with Smooth Trajectory Plot
-Optimized for Apple Silicon (M1/M2/M3/M4)
+
 """
 import os
 import time
